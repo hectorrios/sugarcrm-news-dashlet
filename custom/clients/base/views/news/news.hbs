@@ -1,0 +1,22 @@
+{{!--
+	/* File: ./custom/clients/base/views/news/news.hbs
+	 *
+	 * Date:        July 27, 2016
+	 *
+	 * Author:      Angel Magaña
+	 *
+	 * Description: Adjustment to News dashlet Handlebars template
+	 *
+	 */
+--}}
+
+{{#if feed.entries}}
+    {{#each feed.entries}}
+        <div class="news-article">
+            <h5><a href="{{link}}">{{{title}}}</a></h5>
+            <p>{{{description}}}</p>
+        </div>
+    {{/each}}
+{{else}}
+    <div class="block-footer">{{str "LBL_NO_DATA_AVAILABLE"}}</div>
+{{/if}}
